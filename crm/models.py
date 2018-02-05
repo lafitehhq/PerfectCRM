@@ -1,5 +1,5 @@
 from django.db import models
-from  crm import auth
+from crm import auth
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.utils.safestring import mark_safe
@@ -231,7 +231,6 @@ class StudyRecord(models.Model):
         unique_together = ('course_record','student')
 
 
-
 class UserProfile(auth.AbstractBaseUser, auth.PermissionsMixin):
     email = models.EmailField(
         verbose_name='email address',
@@ -316,7 +315,6 @@ class UserProfile(auth.AbstractBaseUser, auth.PermissionsMixin):
 
 
 
-
 class StuAccount(models.Model):
     '''存储学员账户信息'''
     account = models.OneToOneField("Customer")
@@ -326,6 +324,8 @@ class StuAccount(models.Model):
 
     def __str__(self):
         return self.account.customer.name
+
+
 
 class Role(models.Model):
     '''角色信息'''
@@ -340,6 +340,8 @@ class Role(models.Model):
         verbose_name = "角色"
         verbose_name_plural = "角色"
 
+
+
 class Branch(models.Model):
     '''存储所有校区'''
     name = models.CharField(max_length=64,unique=True)
@@ -350,6 +352,8 @@ class Branch(models.Model):
     class Meta:
         verbose_name = "校区"
         verbose_name_plural = "校区"
+
+
 
 class FirstLayerMenu(models.Model):
     '''第一层侧边栏菜单'''
