@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/crm/models.py" line="82" />
+    <bookmark url="file://$PROJECT_DIR$/crm/models.py" line="60" />
+    <bookmark url="file://$PROJECT_DIR$/crm/models.py" line="202" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b28c9112-c3a2-4a14-8f33-cb42fecae9e8" name="Default" comment="PerfectCRM">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/客户管理系统.xmind" />
+    <list default="true" id="b28c9112-c3a2-4a14-8f33-cb42fecae9e8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/客户管理系统.xmind" afterPath="$PROJECT_DIR$/客户管理系统.xmind" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/admin.py" afterPath="$PROJECT_DIR$/crm/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crm/models.py" afterPath="$PROJECT_DIR$/crm/models.py" />
     </list>
     <ignored path="PerfectCRM.iws" />
@@ -56,6 +63,24 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="db" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="main" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="crm_userprofile" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -66,159 +91,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.beeflow_flowrole_users" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_flowrole_users">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.beeflow_flowtemplate" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_flowtemplate">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.beeflow_step" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_step">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.crm_classlist" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_classlist">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.crm_classlist_teachers" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_classlist_teachers">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.crm_course" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_course">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.crm_courserecord" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_courserecord">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.crm_customer" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_customer">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crm/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crm/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="15" />
+            <state relative-caret-position="-32">
+              <caret line="126" column="3" lean-forward="false" selection-start-line="126" selection-start-column="3" selection-end-line="126" selection-end-column="3" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#5148#5967#0" expanded="false" />
-                <element signature="e#5293#5559#0" expanded="false" />
-                <element signature="e#6004#7126#0" expanded="false" />
-                <element signature="e#7160#7499#0" expanded="false" />
-                <element signature="e#7540#8285#0" expanded="false" />
-                <element signature="e#8325#9623#0" expanded="false" />
-                <element signature="e#8508#8651#0" expanded="false" />
-                <element signature="e#9695#12418#0" expanded="false" />
-                <element signature="e#12458#12773#0" expanded="false" />
-                <element signature="e#12807#13066#0" expanded="false" />
-                <element signature="e#13102#13298#0" expanded="false" />
-                <element signature="e#13201#13217#0" expanded="false" />
-                <element signature="e#13342#13867#0" expanded="false" />
-                <element signature="e#13903#14374#0" expanded="false" />
-                <element signature="e#14416#15178#0" expanded="false" />
-                <element signature="e#14485#14594#0" expanded="false" />
+                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#271#1247#0" expanded="false" />
+                <element signature="e#1293#2116#0" expanded="false" />
+                <element signature="e#2158#3229#0" expanded="false" />
+                <element signature="e#3275#3623#0" expanded="false" />
+                <element signature="e#3665#3760#0" expanded="false" />
+                <element signature="e#3805#3849#0" expanded="false" />
+                <element signature="e#3891#3950#0" expanded="false" />
+                <element signature="e#3998#4108#0" expanded="false" />
+                <element signature="e#4159#4234#0" expanded="false" />
+                <element signature="e#4283#4426#0" expanded="false" />
+                <element signature="e#4470#4509#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -259,6 +149,8 @@
       <find>alex37</find>
       <find>alex371</find>
       <find>alex3714</find>
+      <find>data</find>
+      <find>joind</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Pycharm Workingspace\PerfectCRM</dir>
@@ -274,7 +166,6 @@
         <option value="$PROJECT_DIR$/templates/crm/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/PerfectCRM/urls.py" />
-        <option value="$PROJECT_DIR$/crm/admin.py" />
         <option value="$PROJECT_DIR$/crm/kingadmin.py" />
         <option value="$PROJECT_DIR$/kingadmin/custom_perm_logic.py" />
         <option value="$PROJECT_DIR$/PerfectCRM/views.py" />
@@ -321,6 +212,7 @@
         <option value="$PROJECT_DIR$/kingadmin/statics/kingadmin/js/kingadmin/king_admin.js" />
         <option value="$PROJECT_DIR$/kingadmin/templatetags/admin_tags.py" />
         <option value="$PROJECT_DIR$/crm/models.py" />
+        <option value="$PROJECT_DIR$/crm/admin.py" />
       </list>
     </option>
   </component>
@@ -331,7 +223,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -362,20 +253,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PerfectCRM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PerfectCRM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PerfectCRM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -773,22 +650,29 @@
       <option name="project" value="LOCAL" />
       <updated>1517825811891</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="PerfectCRM">
+      <created>1517831459842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1517831459842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26944444" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47113165" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27714932" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3457207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15427928" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4321267" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2894144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6427039" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8513514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18723176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970502" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967836" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -829,32 +713,11 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/popup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/statics/kingadmin/js/kingadmin/filter_horizontal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7272">
-          <caret line="318" column="61" lean-forward="false" selection-start-line="318" selection-start-column="61" selection-end-line="318" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/components/object_change.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
@@ -891,19 +754,6 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_branch">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_customerfollowup">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1319,59 +1169,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_flowrole_users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="91" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_flowtemplate">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_step">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_classlist">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_classlist_teachers">
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_courserecord">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1397,7 +1203,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_courserecord">
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_classlist_teachers">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1407,6 +1213,87 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_classlist">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_step">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_flowtemplate">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.beeflow_flowrole_users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/72e923f/deaee5f0-9544-4ca7-9ef9-cfd6dfa21781/main.crm_customerfollowup">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-2068372222/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3112">
+          <caret line="785" column="8" lean-forward="false" selection-start-line="785" selection-start-column="8" selection-end-line="785" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python35/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="576" column="8" lean-forward="false" selection-start-line="576" selection-start-column="8" selection-end-line="576" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,36 +1310,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/crm/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="91" />
-          <folding />
+        <state relative-caret-position="106">
+          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#240#4126#0" expanded="false" />
+            <element signature="e#3085#3134#0" expanded="false" />
+            <element signature="e#3203#3265#0" expanded="false" />
+            <element signature="e#3303#3582#0" expanded="false" />
+            <element signature="e#3623#4126#0" expanded="false" />
+            <element signature="e#4165#5341#0" expanded="false" />
+            <element signature="e#5386#6221#0" expanded="false" />
+            <element signature="e#6259#7393#0" expanded="false" />
+            <element signature="e#6959#7005#0" expanded="false" />
+            <element signature="e#7428#7767#0" expanded="false" />
+            <element signature="e#7808#8556#0" expanded="false" />
+            <element signature="e#8596#9924#0" expanded="false" />
+            <element signature="e#12781#13096#0" expanded="false" />
+            <element signature="e#13129#13387#0" expanded="false" />
+            <element signature="e#13422#13619#0" expanded="false" />
+            <element signature="e#13662#14187#0" expanded="false" />
+            <element signature="e#14223#14694#0" expanded="false" />
+            <element signature="e#14736#15498#0" expanded="false" />
+            <element signature="e#14805#14914#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm/models.py">
+    <entry file="file://$PROJECT_DIR$/crm/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="15" />
+        <state relative-caret-position="-32">
+          <caret line="126" column="3" lean-forward="false" selection-start-line="126" selection-start-column="3" selection-end-line="126" selection-end-column="3" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#5148#5967#0" expanded="false" />
-            <element signature="e#5293#5559#0" expanded="false" />
-            <element signature="e#6004#7126#0" expanded="false" />
-            <element signature="e#7160#7499#0" expanded="false" />
-            <element signature="e#7540#8285#0" expanded="false" />
-            <element signature="e#8325#9623#0" expanded="false" />
-            <element signature="e#8508#8651#0" expanded="false" />
-            <element signature="e#9695#12418#0" expanded="false" />
-            <element signature="e#12458#12773#0" expanded="false" />
-            <element signature="e#12807#13066#0" expanded="false" />
-            <element signature="e#13102#13298#0" expanded="false" />
-            <element signature="e#13201#13217#0" expanded="false" />
-            <element signature="e#13342#13867#0" expanded="false" />
-            <element signature="e#13903#14374#0" expanded="false" />
-            <element signature="e#14416#15178#0" expanded="false" />
-            <element signature="e#14485#14594#0" expanded="false" />
+            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#271#1247#0" expanded="false" />
+            <element signature="e#1293#2116#0" expanded="false" />
+            <element signature="e#2158#3229#0" expanded="false" />
+            <element signature="e#3275#3623#0" expanded="false" />
+            <element signature="e#3665#3760#0" expanded="false" />
+            <element signature="e#3805#3849#0" expanded="false" />
+            <element signature="e#3891#3950#0" expanded="false" />
+            <element signature="e#3998#4108#0" expanded="false" />
+            <element signature="e#4159#4234#0" expanded="false" />
+            <element signature="e#4283#4426#0" expanded="false" />
+            <element signature="e#4470#4509#0" expanded="false" />
           </folding>
         </state>
       </provider>

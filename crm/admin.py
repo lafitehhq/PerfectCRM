@@ -7,6 +7,7 @@ from crm import models
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
+
 class UserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
@@ -15,7 +16,7 @@ class UserCreationForm(forms.ModelForm):
 
     class Meta:
         model = models.UserProfile
-        fields = ('email','name')
+        fields = ('email', 'name')
 
     def clean_password2(self):
         # Check that the two password entries match
@@ -46,7 +47,7 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = models.UserProfile
-        fields = ('email','password','is_active', 'is_admin')
+        fields = ('email', 'password', 'is_active', 'is_admin')
 
     def clean_password(self):
         # Regardless of what the user provides, return the initial value.
@@ -63,15 +64,15 @@ class UserProfileAdmin(UserAdmin):
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('id','email','is_admin','is_active')
+    list_display = ('id', 'email', 'is_admin', 'is_active')
     list_filter = ('is_admin',)
     list_editable = ['is_admin']
 
     fieldsets = (
-        (None, {'fields': ('email','name', 'password')}),
+        (None, {'fields': ('email', 'name', 'password')}),
         ('Personal info', {'fields': ('memo',)}),
 
-        ('用户权限', {'fields': ('is_active','is_staff','is_admin','roles','user_permissions','groups')}),
+        ('用户权限', {'fields': ('is_active', 'is_staff', 'is_admin', 'roles', 'user_permissions', 'groups')}),
 
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
@@ -79,59 +80,65 @@ class UserProfileAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email',  'password1', 'password2','is_active','is_admin')}
+            'fields': ('email',  'password1', 'password2', 'is_active', 'is_admin')}
         ),
     )
     search_fields = ('email',)
     ordering = ('email',)
-    filter_horizontal = ('user_permissions','groups')
+    filter_horizontal = ('user_permissions', 'groups')
 
 
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ('qq','name','source','phone','course','class_type','consultant','status','date')
-    choice_fields = ('status','source','class_type')
-    fk_fields = ('consultant','course')
+    list_display = ('qq', 'name', 'source', 'phone', 'course', 'class_type', 'consultant', 'status', 'date')
+    choice_fields = ('status', 'source', 'class_type')
+    fk_fields = ('consultant', 'course')
     list_per_page = 10
-    list_filter = ('name','source','course','status','date','class_type','consultant')
-    list_editable = ['phone',]
+    list_filter = ('name', 'source', 'course', 'status', 'date', 'class_type', 'consultant')
+    list_editable = ['phone', ]
+
 
 class MenuAdmin(admin.ModelAdmin):
-    list_display = ('name','url_type','url_name','order')
+    list_display = ('name', 'url_type', 'url_name', 'order')
     filter_horizontal = ('sub_menus',)
 
+
 class SubMenuAdmin(admin.ModelAdmin):
-    list_display = ('name','url_name','order')
+    list_display = ('name', 'url_name', 'order')
+
 
 class RoleAdmin(admin.ModelAdmin):
     list_display = ('name',)
     filter_horizontal = ('menus',)
 
+
 class EnrollmentAdmin(admin.ModelAdmin):
-    list_display = ('customer','course_grade','school','enrolled_date','contract_agreed','contract_approved')
+    list_display = ('customer', 'course_grade', 'school', 'enrolled_date', 'contract_agreed', 'contract_approved')
 
 
 class PaymentRecordAdmin(admin.ModelAdmin):
-    list_display = ('enrollment','pay_type','paid_fee','date','consultant')
+    list_display = ('enrollment', 'pay_type', 'paid_fee', 'date', 'consultant')
+
 
 class StudyRecordAdmin(admin.ModelAdmin):
-    list_display = ('id','student','course_record','record','score','date','note')
-    list_editable = ('student','score','record','note')
+    list_display = ('id', 'student', 'course_record', 'record', 'score', 'date', 'note')
+    list_editable = ('student', 'score', 'record', 'note')
 
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('id','name','period')
+    list_display = ('id', 'name', 'period')
 
-admin.site.register(models.Customer,CustomerAdmin)
+# 注册所有表至admin
+admin.site.register(models.Customer, CustomerAdmin)
 admin.site.register(models.CustomerFollowUp)
 admin.site.register(models.Branch)
 admin.site.register(models.ClassList)
-admin.site.register(models.Course,CourseAdmin)
-admin.site.register(models.Role,RoleAdmin)
-admin.site.register(models.UserProfile,UserProfileAdmin)
-admin.site.register(models.Enrollment,EnrollmentAdmin)
+admin.site.register(models.Course, CourseAdmin)
+admin.site.register(models.Role, RoleAdmin)
+admin.site.register(models.UserProfile, UserProfileAdmin)
+admin.site.register(models.Enrollment, EnrollmentAdmin)
 admin.site.register(models.StuAccount)
 admin.site.register(models.CourseRecord)
-admin.site.register(models.StudyRecord,StudyRecordAdmin)
-admin.site.register(models.FirstLayerMenu,MenuAdmin)
-admin.site.register(models.SubMenu,SubMenuAdmin)
-admin.site.register(models.PaymentRecord,PaymentRecordAdmin)
+admin.site.register(models.StudyRecord, StudyRecordAdmin)
+admin.site.register(models.FirstLayerMenu, MenuAdmin)
+admin.site.register(models.SubMenu, SubMenuAdmin)
+admin.site.register(models.PaymentRecord, PaymentRecordAdmin)
