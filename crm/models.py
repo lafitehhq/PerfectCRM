@@ -54,7 +54,10 @@ class Customer(models.Model):
     def __str__(self):
         return u"QQ:%s -- Name:%s" % (self.qq, self.name)
 
-    class Meta:  # 这个是用来在admin页面上展示的，因为默认显示的是表名，加上这个就变成中文啦
+    class Meta:  # 这个是用来在admin页面上展示的，因为默认显示的是表名，加上这个就变成中文
+        verbose_name = u'***表'
+        verbose_name_plural = u"***表"
+
         verbose_name = u'客户信息表'
         verbose_name_plural = u"客户信息表"
 

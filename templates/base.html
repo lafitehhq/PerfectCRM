@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PerfectCRM|老男孩教育</title>
+	<title>CRM管理系统</title>
 
 
 	<!--STYLESHEET-->
@@ -34,10 +33,7 @@
 	<link href="/static/css/pace.min.css" rel="stylesheet">
 	<script src="/static/js/pace.min.js"></script>
 
-
-
 </head>
-
 
 <body>
 {% block body  %}
@@ -47,23 +43,18 @@ you own body data....
 {% endblock %}
 	<!--JAVASCRIPT-->
 	<!--=================================================-->
-
 	<!--jQuery [ REQUIRED ]-->
 	<script src="/static/js/jquery-2.1.1.min.js"></script>
-
 
 	<!--BootstrapJS [ RECOMMENDED ]-->
 	<script src="/static/js/bootstrap.min.js"></script>
 
-
 	<!--Fast Click [ OPTIONAL ]-->
 	<script src="/static/js/fastclick.min.js"></script>
-
 	
 	<!--Nifty Admin [ RECOMMENDED ]-->
 	<script src="/static/js/nifty.min.js"></script>
 	<script src="/static/plugins/dropzone/dropzone_latest.js"></script>
-
 	
     <script>
         $(document).ready(function () {
@@ -83,10 +74,10 @@ you own body data....
 
     </script>
 
-
 {% block bottom-js %}
 {% endblock %}
+{% block extra-js %}
 
-{% block extra-js %}{% endblock %}
+{% endblock %}
 </body>
 </html>

@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
+from django.conf.urls import url, include
 from django.contrib import admin
 from crm import views
 from PerfectCRM import views as main_views
@@ -23,10 +23,10 @@ urlpatterns = [
     url(r'^crm/', include("crm.urls")),
     url(r'^beeflow/', include("beeflow.urls")),
     url(r'^$', main_views.PortalView.as_view()),
-    #url(r'^kingadmin/', include("crm.kingadmin_urls")),
+    # url(r'^kingadmin/', include("crm.kingadmin_urls")),
     url(r'^kingadmin/', include("kingadmin.urls")),
     url(r'^stu/', include("student.urls")),
     url(r'^teacher/', include("teacher.urls")),
     url(r'^account/login/', views.acc_login),
-    url(r'^account/logout/', views.acc_logout,name='logout'),
+    url(r'^account/logout/', views.acc_logout, name='logout'),
 ]

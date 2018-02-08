@@ -134,8 +134,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    "%s/%s" %(BASE_DIR, "statics"),
-    #"%s/%s" %(BASE_DIR, "kingadmin/statics"),
+
+    "%s/%s" % (BASE_DIR, "statics"),
+    # os.path.join(BASE_DIR, "statics"),
 ]
 
 AUTH_USER_MODEL = 'crm.UserProfile'
@@ -145,3 +146,8 @@ LOGIN_URL = "/account/login/"
 VERIFICATION_CODE_IMGS_DIR = "%s/statics/verify_code_imgs/" %BASE_DIR
 
 BASE_HOMEWORK_DIR = "%s/data/homeworks/" % BASE_DIR
+
+
+
+
+# "%s/%s" %(BASE_DIR, "kingadmin/statics"),
