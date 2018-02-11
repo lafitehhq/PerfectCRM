@@ -1,9 +1,9 @@
-from django.shortcuts import render,HttpResponseRedirect,Http404
+from django.shortcuts import render, HttpResponseRedirect, Http404
 
 from crm import forms
 from crm import models
 from crm import admin
-from django.contrib.auth import logout,login,authenticate
+from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 
 from PerfectCRM import settings
@@ -37,7 +37,7 @@ def customers(request):
         return template_data
 
 @login_required
-def customer_change(request,customer_id):
+def customer_change(request, customer_id):
     """customer change page"""
     template_data =  kingadmin_views.table_change(request,'crm','customer',customer_id,embed=True)
     if type(template_data) is dict:
@@ -60,10 +60,10 @@ def sales_report(request):
 def acc_login(request):
     err_msg = {}
     today_str = datetime.date.today().strftime("%Y%m%d")
-    verify_code_img_path = "%s/%s" %(settings.VERIFICATION_CODE_IMGS_DIR,
+    verify_code_img_path = "%s/%s" % (settings.VERIFICATION_CODE_IMGS_DIR,
                                      today_str)
     if not os.path.isdir(verify_code_img_path):
-        os.makedirs(verify_code_img_path,exist_ok=True)
+        os.makedirs(verify_code_img_path, exist_ok=True)
     print("session:",request.session.session_key)
     # print("session:",request.META.items())
     random_filename = "".join(random.sample(string.ascii_lowercase,4))

@@ -2,11 +2,11 @@ import datetime
 import re
 import json
 
-from django.contrib.auth import login,logout,authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.core.cache import cache
-from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
-from django.shortcuts import render,HttpResponse,HttpResponseRedirect,Http404,redirect
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect, Http404, redirect
 
 from kingadmin.admin_base import site
 from kingadmin import forms
@@ -19,15 +19,14 @@ from kingadmin import app_config
 @check_permission
 @login_required(login_url="/kingadmin/login/")
 def app_index(request):
-    return render(request,'kingadmin/app_index.html', {'enabled_admins':site.enabled_admins})
+    return render(request, 'kingadmin/app_index.html', {'enabled_admins':site.enabled_admins})
 
 @login_required
-def app_tables(request,app_name):
+def app_tables(request, app_name):
 
-    enabled_admins = {app_name:site.enabled_admins[app_name]}
+    enabled_admins = {app_name: site.enabled_admins[app_name]}
 
-
-    return render(request, 'kingadmin/app_index.html',{'enabled_admins':enabled_admins,'current_app':app_name})
+    return render(request, 'kingadmin/app_index.html', {'enabled_admins': enabled_admins, 'current_app': app_name})
 
 
 def acc_login(request):
@@ -39,7 +38,7 @@ def acc_login(request):
     #     os.makedirs(verify_code_img_path,exist_ok=True)
     # #print("session:",request.session.session_key)
     # ##print("session:",request.META.items())
-    #random_filename = "".join(random.sample(string.ascii_lowercase,4))
+    # random_filename = "".join(random.sample(string.ascii_lowercase,4))
     # random_code = verify_code.gene_code(verify_code_img_path,random_filename)
     # cache.set(random_filename, random_code,30)
 
@@ -48,16 +47,16 @@ def acc_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         _verify_code = request.POST.get('verify_code')
-        _verify_code_key  = request.POST.get('verify_code_key')
+        _verify_code_key = request.POST.get('verify_code_key')
 
-        ##print("verify_code_key:",_verify_code_key)
-        ##print("verify_code:",_verify_code)
+        #  #print("verify_code_key:",_verify_code_key)
+        #  #print("verify_code:",_verify_code)
         if cache.get(_verify_code_key) == _verify_code:
-            #print("code verification pass!")
+            # print("code verification pass!")
 
-            user = authenticate(username=username,password=password)
+            user = authenticate(username=username, password=password)
             if user is not None:
-                login(request,user)
+                login(request, user)
                 request.session.set_expiry(60*60)
                 return HttpResponseRedirect(request.GET.get("next") if request.GET.get("next") else "/kingadmin/")
 
@@ -67,8 +66,8 @@ def acc_login(request):
         else:
             err_msg['error'] = "验证码错误!"
 
-    #return render(request,'login.html',{"filename":random_filename, "today_str":today_str, "error":err_msg})
-    return render(request,'kingadmin/login.html',{ "error":err_msg})
+    # return render(request,'login.html',{"filename":random_filename, "today_str":today_str, "error":err_msg})
+    return render(request, 'kingadmin/login.html', { "error":err_msg})
 
 
 
@@ -87,11 +86,11 @@ def batch_update(request,editable_data,admin_class):
         obj_id = row_data.get('id')
         try:
             if obj_id:
-                print("editable data",row_data,list(row_data.keys()))
+                print("editable data", row_data, list(row_data.keys()))
                 obj = admin_class.model.objects.get(id=obj_id)
                 model_form = forms.create_form(admin_class.model, list(row_data.keys()),
-                                               admin_class, request=request,partial_update=True)
-                form_obj = model_form(instance=obj,data=row_data)
+                                               admin_class, request=request, partial_update=True)
+                form_obj = model_form(instance=obj, data=row_data)
                 if form_obj.is_valid():
                    form_obj.save()
 
@@ -106,7 +105,7 @@ def batch_update(request,editable_data,admin_class):
                 #         if row_data[column] in ('True','False'):
                 #             if obj._meta.get_field(column).get_internal_type() == "BooleanField":
                 #                 setattr(obj, column, eval(row_data[column]))
-                #                 #print("setting column [%s] to [%s]" %(column,row_data[column]), eval(row_data[column]))
+                #                  print("setting column [%s] to [%s]" %(column,row_data[column]), eval(row_data[column]))
                 #             else:
                 #                 setattr(obj, column, row_data[column])
                 #         else:
@@ -114,16 +113,16 @@ def batch_update(request,editable_data,admin_class):
                 #
                 # obj.save()
 
-        #except Exception as e:
+        # except Exception as e:
         except KeyboardInterrupt as e:
-            return False,[e,obj]
+            return False, [e, obj]
     if errors:
-        return False ,errors
+        return False, errors
     return True, []
 
 @check_permission
 @login_required(login_url="/kingadmin/login/")
-def display_table_list(request,app_name,table_name,embed=False):
+def display_table_list(request, app_name, table_name, embed=False):
     """
     
     :param request: 
@@ -135,7 +134,7 @@ def display_table_list(request,app_name,table_name,embed=False):
 
     errors = []
     if app_name in site.enabled_admins:
-        ##print(enabled_admins[url])
+        # #print(enabled_admins[url])
         if table_name in site.enabled_admins[app_name]:
             admin_class = site.enabled_admins[app_name][table_name]
 
@@ -144,15 +143,14 @@ def display_table_list(request,app_name,table_name,embed=False):
                 print(request.POST)
 
                 editable_data = request.POST.get("editable_data")
-                if editable_data: #for list editable
+                if editable_data:  # for list editable
                     editable_data = json.loads(editable_data)
                     #print("editable",editable_data)
-                    res_state,errors = batch_update(request,editable_data,admin_class)
-                    #if res_state == False:
+                    res_state, errors = batch_update(request, editable_data, admin_class)
+                    # if res_state == False:
                     #    #errors.append(error)
 
-
-                else: #for action
+                else:  # for action
                     selected_ids = request.POST.get("selected_ids")
                     action = request.POST.get("admin_action")
                     if selected_ids:
@@ -219,7 +217,7 @@ def table_change(request,app_name,table_name,obj_id,embed=False):
 
             for field_obj in admin_class.model._meta.many_to_many:
                 fields.append(field_obj.name)
-            ##print('fields', fields)
+            # #print('fields', fields)
             model_form = forms.create_form(admin_class.model, fields,admin_class,request=request)
 
             if request.method == "GET":
@@ -227,7 +225,7 @@ def table_change(request,app_name,table_name,obj_id,embed=False):
 
             elif request.method == "POST":
                 print("post:",request.POST)
-                form_obj = model_form(request.POST,instance=obj)
+                form_obj = model_form(request.POST, instance=obj)
                 if form_obj.is_valid():
                     form_obj.validate_unique()
                     if form_obj.is_valid():
@@ -236,22 +234,22 @@ def table_change(request,app_name,table_name,obj_id,embed=False):
             return_data = {'form_obj':form_obj,
                            'model_verbose_name':admin_class.model._meta.verbose_name,
                            'model_name':admin_class.model._meta.model_name,
-                           'app_name':app_name,
-                           'admin_class':admin_class,
+                           'app_name': app_name,
+                           'admin_class': admin_class,
                            'enabled_admins': site.enabled_admins
 
                             }
             if embed:
                 return return_data
             else:
-                return render(request,'kingadmin/table_change.html',return_data)
+                return render(request, 'kingadmin/table_change.html',return_data)
 
     else:
-        raise Http404("url %s/%s not found" %(app_name,table_name)  )
+        raise Http404("url %s/%s not found" %(app_name, table_name)  )
 
 
 @login_required(login_url="/kingadmin/login/")
-def table_del(request,app_name,table_name,obj_id):
+def table_del(request, app_name, table_name, obj_id):
 
     if app_name in site.enabled_admins:
         if table_name in site.enabled_admins[app_name]:
