@@ -21,11 +21,8 @@
 2. django 1.10+
 
 ### 使用
-1. python3 manage.py runserver 0.0.0.0:9000
-2. `username: alex@126.com`  `password: alex3714`
+`python3 manage.py runserver 0.0.0.0:9000`
 
-###使用中的bug可加此群汇报
-qq: python开发交流群 255012808 
 
 ##以下为一些项目截图
 

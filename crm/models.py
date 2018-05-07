@@ -89,7 +89,7 @@ class Enrollment(models.Model):
     '''存储学员报名的信息'''
     # 选择他报的班级，班级是关联课程的，比如python开发10期
     course_grade = models.ForeignKey("ClassList", verbose_name="所报班级")
-    why_us = models.TextField("为什么报名老男孩", max_length=1024, default=None, blank=True, null=True)
+    why_us = models.TextField("为什么报名***", max_length=1024, default=None, blank=True, null=True)
     your_expectation = models.TextField("学完想达到的具体期望", max_length=1024, blank=True, null=True)
     contract_agreed = models.BooleanField("我已认真阅读完培训协议并同意全部协议内容")
     contract_approved = models.BooleanField("审批通过", help_text=u"在审阅完学员的资料无误后勾选此项,合同即生效")
@@ -107,7 +107,7 @@ class Enrollment(models.Model):
         verbose_name = '学员报名表'
         verbose_name_plural = "学员报名表"
         unique_together = ("customer", "course_grade")
-        # 这里为什么要做个unique_together联合唯一？因为老男孩有很多个课程， 学生学完了一个觉得好的话，以后还可以再报其它班级，
+        # 这里为什么要做个unique_together联合唯一？因为***有很多个课程， 学生学完了一个觉得好的话，以后还可以再报其它班级，
         # 每报一个班级，就得单独创建一条报名记录，所以这里想避免重复数据的话，就得搞个"客户 + 班级"的联合唯一喽
 
 

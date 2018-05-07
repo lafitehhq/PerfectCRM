@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('enrolled_date', models.DateTimeField(auto_created=True, auto_now_add=True, verbose_name='报名日期')),
-                ('why_us', models.TextField(blank=True, default=None, max_length=1024, null=True, verbose_name='为什么报名老男孩')),
+                ('why_us', models.TextField(blank=True, default=None, max_length=1024, null=True, verbose_name='为什么报名***')),
                 ('your_expectation', models.TextField(blank=True, max_length=1024, null=True, verbose_name='学完想达到的具体期望')),
                 ('contract_agreed', models.BooleanField(verbose_name='我已认真阅读完培训协议并同意全部协议内容')),
                 ('contract_approved', models.BooleanField(help_text='在审阅完学员的资料无误后勾选此项,合同即生效', verbose_name='审批通过')),
