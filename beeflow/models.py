@@ -8,10 +8,10 @@ class FlowTemplate(models.Model):
     """流程模版"""
     name = models.CharField(max_length=128, unique=True)
     description = models.TextField(blank=True, null=True)
-    flow_type_choices = (('_FlowVaction', '请假流程'),
-                         ('_FlowTrip', '出差申请'),
-                         ('_FlowBecome_Full_Staff', '转正申请'),
-                         ('_FlowLoan', '借款申请'),
+    flow_type_choices = (('FlowVaction', '请假流程'),
+                         ('FlowTrip', '出差申请'),
+                         ('FlowBecome_Full_Staff', '转正申请'),
+                         ('FlowLoan', '借款申请'),
                          )
     flow_type = models.CharField(choices=flow_type_choices, max_length=64)
 
@@ -30,13 +30,13 @@ class Flow(models.Model):
     def __str__(self):
         return "%s 发起人:%s" %(self.template,self.started_user)
 
-class _FlowTrip(models.Model):
+class FlowTrip(models.Model):
     """出差流程"""
     flow = models.ForeignKey("Flow")
     start_date = models.DateTimeField("开始时间")
     end_date = models.DateTimeField("结束时间")
 
-class _FlowLoan(models.Model):
+class FlowLoan(models.Model):
     """借款申请"""
     flow = models.ForeignKey("Flow")
     usage_choices = ((0,'出差借款'),)
@@ -46,14 +46,14 @@ class _FlowLoan(models.Model):
     end_date = models.DateTimeField("还款时间")
 
 
-class _FlowBecome_Full_Staff(models.Model):
+class FlowBecome_Full_Staff(models.Model):
     """转正流程"""
     flow = models.ForeignKey("Flow")
     probation_start_date = models.DateField("入职日期")
     probation_end_date = models.DateField("转正日期")
 
 
-class _FlowVaction(models.Model):
+class FlowVaction(models.Model):
     """请假流程"""
     flow = models.ForeignKey("Flow")
     vaction_type_choices  = ((0,'病假'),(1,'年假'),(2,'事假'),(3,'产假'))

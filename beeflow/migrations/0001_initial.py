@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='_FlowBecome_Full_Staff',
+            name='FlowBecome_Full_Staff',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('probation_start_date', models.DateField(verbose_name='入职日期')),
@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='_FlowLoan',
+            name='FlowLoan',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('usage', models.SmallIntegerField(choices=[(0, '出差借款')], verbose_name='用途')),
@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='_FlowTrip',
+            name='FlowTrip',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('start_date', models.DateTimeField(verbose_name='开始时间')),
@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='_FlowVaction',
+            name='FlowVaction',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('vaction_type', models.SmallIntegerField(choices=[(0, '病假'), (1, '年假'), (2, '事假'), (3, '产假')], default=2)),
@@ -83,7 +83,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=128, unique=True)),
                 ('description', models.TextField(blank=True, null=True)),
-                ('flow_type', models.CharField(choices=[('_FlowVaction', '请假流程'), ('_FlowTrip', '出差申请'), ('_FlowBecome_Full_Staff', '转正申请'), ('_FlowLoan', '借款申请')], max_length=64)),
+                ('flow_type', models.CharField(choices=[('FlowVaction', '请假流程'), ('FlowTrip', '出差申请'), ('FlowBecome_Full_Staff', '转正申请'), ('FlowLoan', '借款申请')], max_length=64)),
             ],
         ),
         migrations.CreateModel(
@@ -115,22 +115,22 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='beeflow.FlowTemplate'),
         ),
         migrations.AddField(
-            model_name='_flowvaction',
+            model_name='Flowvaction',
             name='flow',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='beeflow.Flow'),
         ),
         migrations.AddField(
-            model_name='_flowtrip',
+            model_name='flowtrip',
             name='flow',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='beeflow.Flow'),
         ),
         migrations.AddField(
-            model_name='_flowloan',
+            model_name='flowloan',
             name='flow',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='beeflow.Flow'),
         ),
         migrations.AddField(
-            model_name='_flowbecome_full_staff',
+            model_name='flowbecome_full_staff',
             name='flow',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='beeflow.Flow'),
         ),
