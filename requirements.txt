@@ -7,7 +7,7 @@ async-timeout==2.0.1
 attrs==17.3.0
 Automat==0.6.0
 beautifulsoup4==4.6.0
-bleach==2.1.1
+bleach==3.1.2
 bootstrap-admin==0.3.7.1
 bs4==0.0.1
 certifi==2017.7.27.1
