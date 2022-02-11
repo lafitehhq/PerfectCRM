@@ -98,7 +98,7 @@ socks5==0.2.1
 SQLAlchemy==1.2.7
 traitlets==4.3.2
 transitions==0.4.1
-Twisted==17.9.0
+Twisted==22.1.0
 twitter==1.18.0
 urllib3==1.22
 w3lib==1.18.0
