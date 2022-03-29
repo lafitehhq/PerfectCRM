@@ -58,7 +58,7 @@ numpy==1.13.1
 oauthlib==2.0.3
 olefile==0.44
 pandas==0.22.0
-paramiko==2.0.2
+paramiko==2.10.1
 parsel==1.2.0
 parso==0.1.0
 pathtools==0.1.2
